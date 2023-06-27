@@ -1,0 +1,32 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:#fff;
+  }
+
+.card {
+    width: 446px;
+    height: 551px;
+    background-color: #000;
+}
+
+.content {
+    margin: 0 17px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 39px;
+}
+
+.label_name {
+
+}
+
+.input {
+    
+}
