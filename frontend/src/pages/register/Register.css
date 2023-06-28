@@ -8,7 +8,7 @@
 
 .card {
     width: 446px;
-    height: 540px;
+    height: 420px;
     background-color: #000;
     position: relative;
 }
@@ -17,17 +17,33 @@
     margin: 0 17px;
 }
 
-.title {
+/* .title {
     font-weight: 700;
     font-size: 30px;
     text-align: center;
-    margin-top: 39px;
-}
+    margin-top: 30px;
+} */
 
 /* .label_name {
 
-}
+} */
 
 .input {
-    
-} */
+    width: 403px;
+    height: 35px;
+    font-size: 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.text {
+    font-size: 13px;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #EB4343;
+}
