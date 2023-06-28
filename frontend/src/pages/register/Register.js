@@ -1,6 +1,7 @@
 import { useState } from 'react';
 // import { useNavigate } from "react-router-dom";
 import './Register.css';
+import Button from '../../components/btns/login_btn/ButtonRegister';
 
 
 const Register = () => {
@@ -41,6 +42,7 @@ const Register = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
+                    <Button />
                 </form> 
             </div>
         </div>

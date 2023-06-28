@@ -8,8 +8,9 @@
 
 .card {
     width: 446px;
-    height: 551px;
+    height: 540px;
     background-color: #000;
+    position: relative;
 }
 
 .content {
@@ -23,10 +24,10 @@
     margin-top: 39px;
 }
 
-.label_name {
+/* .label_name {
 
 }
 
 .input {
     
-}
+} */
