@@ -1,24 +1,23 @@
+import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
-import './Register.css';
-import Button from '../../components/btns/login_btn/ButtonRegister';
 
+import './Login.css';
 
-const Register = () => {
+import Button from '../../components/btns/login_btn/ButtonLogin'
+
+const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [matchPassword, setMatchPassword] = useState("");
-    // const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefault();   
+        e.preventDefault();
+    }
 
-    };
-
-    return(
-        <div className='body'>
-            <div className='card'>
+    return (
+        <>
+            <div className='body'>
+            <div className='card_lg'>
                 <Link to="/" 
                     className='title'
                     style={{
@@ -48,20 +47,16 @@ const Register = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <br/>
-                    <div className='label_name'>Confirm Password</div>
-                    <input
-                        className='input'
-                        type="password"
-                        value={matchPassword}
-                        onChange={(e) => setMatchPassword(e.target.value)}
-                    />
                     <Button />
-                    <div className='text'>Have account? <a href='/login'>Login</a></div>
+                    <div className='help'>
+                        <div className='text'>Create an account? <a href='/register'>Register</a></div>
+                        <a className='text' href='/'>Forgot password</a>
+                    </div>
                 </form> 
             </div>
         </div>
+        </>
     )
 }
 
-export default Register;
+export default Login
