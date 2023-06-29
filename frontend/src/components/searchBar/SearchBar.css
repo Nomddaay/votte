@@ -1,0 +1,17 @@
+.search_bar {
+    left: 0;
+}
+
+.input_search_bar {
+    width: 200px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+.input_search_bar::placeholder {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
