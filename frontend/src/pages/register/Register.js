@@ -19,7 +19,7 @@ const Register = () => {
     return(
         <div className='body'>
             <div className='card'>
-                <Link to="/" 
+                <Link to="/home_page" 
                     className='title'
                     style={{
                         display: 'flex',

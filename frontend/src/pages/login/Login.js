@@ -18,7 +18,7 @@ const Login = () => {
         <>
             <div className='body'>
             <div className='card_lg'>
-                <Link to="/" 
+                <Link to="/home_page" 
                     className='title'
                     style={{
                         display: 'flex',
