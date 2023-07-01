@@ -1,7 +1,6 @@
 import React from 'react';
 import './NavBar.css';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -9,24 +8,59 @@ const NavBar = () => {
       <div className='nav_bar_options'>
         <ul>
           <li>
-            <Link to='/' className='nav_items'>SONGS</Link>
+            <NavLink
+              exact
+              to='/songs'
+              className='nav_items'
+              activeClassName='active'
+            >
+              SONGS
+            </NavLink>
           </li>
           <li>
-            <Link to='/' className='nav_items'>SPORTS</Link>
+            <NavLink
+              exact
+              to='/sports'
+              className='nav_items'
+              activeClassName='active'
+            >
+              SPORTS
+            </NavLink>
           </li>
           <li>
-            <Link to='/' className='nav_items'>MOVIES</Link>
+            <NavLink
+              exact
+              to='/movies'
+              className='nav_items'
+              activeClassName='active'
+            >
+              MOVIES
+            </NavLink>
           </li>
           <li>
-            <Link to='/' className='nav_items'>BOOKS</Link>
+            <NavLink
+              exact
+              to='/books'
+              className='nav_items'
+              activeClassName='active'
+            >
+              BOOKS
+            </NavLink>
           </li>
           <li>
-            <Link to='/' className='nav_items'>BLOG</Link>
+            <NavLink
+              exact
+              to='/blog'
+              className='nav_items'
+              activeClassName='active'
+            >
+              BLOG
+            </NavLink>
           </li>
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
 export default NavBar;

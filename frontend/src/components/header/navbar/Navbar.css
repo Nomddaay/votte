@@ -28,7 +28,7 @@
 
 .nav_bar_options ul li:hover {
     background-color: #fff;
-    cursor: pointer;
+    cursor: pointer;  
 }
 
 .nav_bar_options ul li:last-child {
@@ -43,7 +43,6 @@
     font-weight: 600;
 }
 
-.nav_items:hover {
-    color: #111;
+.nav_bar_options ul li.active {
+    background-color: #fff;
 }
-

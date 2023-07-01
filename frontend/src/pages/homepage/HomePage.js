@@ -7,11 +7,16 @@ import './HomePage.css';
 const HomePage = () => {
   return (
     <>
-      <TitleBar />
-      <NavBar />
+      <div className='header_section'>
+        <TitleBar />
+        <NavBar />
+      </div>
       <div className='wrapper'>
         <div className='section1'>
-          <div className='big_text'>NNN</div>
+          <div className='big_text'>VOTE FOR YOUR ENTERTAINMENT GENRES</div>
+          <div className='small_text'>Vote for your favorite entertainment genres and shape the future of entertainment. 
+          Explore diverse categories like movies, music, books, and more. Discover the latest releases, 
+          timeless classics, and hidden gems.</div>
         </div>  
       </div>
       <Footer />
