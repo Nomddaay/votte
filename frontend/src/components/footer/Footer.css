@@ -1,4 +1,48 @@
 .footer {
     background-color: #000000;
-    height: 180px;
+    height: 120px;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+
+.section_item_A {
+    padding-left: 20px;    
+}
+
+.text_logo_footer {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 35px 0 20px 70px;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 12px;
+}
+
+.section_item_B {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0 10px;
+}
+
+.contact_me_text {
+    padding-bottom: 15px;
+}
+
+.list_icons {
+    
+    padding: 0 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
 }
