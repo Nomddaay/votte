@@ -1,0 +1,5 @@
+.App {
+    /* Taking the full height of the body. No scroll */
+    position: relative;
+    min-height: 100vh;
+}

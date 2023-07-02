@@ -3,6 +3,7 @@ import Register from './pages/register/Register';
 import Login from './pages/login/Login';
 import HomePage from "./pages/homepage/HomePage";
 import Songs from "./pages/songs/Songs";
+import './App.css';
 
 
 function App() {

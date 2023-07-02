@@ -65,6 +65,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        <div className='section_item_C'>
+          <div className='designed'>Designed by Nomddaay</div>
+        </div>
       </div>
     </div>
   )
