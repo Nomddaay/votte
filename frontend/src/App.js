@@ -9,6 +9,7 @@ import ScrollToTop from "./scripts/ScrollToTop";
 
 
 function App() {
+  
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
   }, []);
