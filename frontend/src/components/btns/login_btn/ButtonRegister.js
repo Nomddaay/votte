@@ -3,7 +3,7 @@ import './Button.css';
 
 const ButtonRegister = () => {
   return (
-    <div className='form'>SUBMIT</div>
+    <button className='form' type='submit'>SUBMIT</button>
   )
 }
 

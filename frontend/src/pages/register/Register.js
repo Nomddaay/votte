@@ -1,19 +1,27 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 // import { useNavigate } from "react-router-dom";
 import './Register.css';
 import Button from '../../components/btns/login_btn/ButtonRegister';
+import { FirebaseContext } from '../../components/context/FirebaseContext';
 
 
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [matchPassword, setMatchPassword] = useState("");
     // const navigate = useNavigate();
+    const { firebase } = useContext(FirebaseContext)
 
     const handleSubmit = async (e) => {
-        e.preventDefault();   
-
+        e.preventDefault();
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(email, password)
+            .then(() => alert('signed up!'))
+            .catch((error) => alert(error.message))   
+        alert(email + " " + password);
+        setEmail("");
+        setPassword("");
     };
 
     return(
@@ -49,13 +57,6 @@ const Register = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <br/>
-                    <div className='label_name'>Confirm Password</div>
-                    <input
-                        className='input'
-                        type="password"
-                        value={matchPassword}
-                        onChange={(e) => setMatchPassword(e.target.value)}
-                    />
                     <Button />
                     <div className='text'>Have account? <a href='/login'>Login</a></div>
                 </form> 
