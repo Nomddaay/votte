@@ -1,25 +1,24 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import './Register.css';
 import Button from '../../components/btns/login_btn/ButtonRegister';
-import { FirebaseContext } from '../../components/context/FirebaseContext';
+import { useAuth } from '../../components/context/AuthContext';
 
 
 const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    // const navigate = useNavigate();
-    const { firebase } = useContext(FirebaseContext)
+    const navigate = useNavigate();
+    const auth = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        firebase
-            .auth()
-            .createUserWithEmailAndPassword(email, password)
-            .then(() => alert('signed up!'))
-            .catch((error) => alert(error.message))   
-        alert(email + " " + password);
+        auth.signup({
+            email, 
+            password, 
+            callback: () => navigate('/login'),
+        });
         setEmail("");
         setPassword("");
     };

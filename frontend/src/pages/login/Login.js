@@ -1,17 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../components/context/AuthContext';
 
 import './Login.css';
 
 import Button from '../../components/btns/login_btn/ButtonLogin'
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [emailValue, setEmailValue] = useState("");
+    const [passwordValue, setPasswordValue] = useState("");
+    const auth = useAuth();
+    let navigate  = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        auth.login({
+            email: emailValue,
+            password: passwordValue,
+            callback: () => {
+                navigate('/home_page'); 
+            }
+        });
     }
 
     return (
@@ -36,16 +46,16 @@ const Login = () => {
                     <input
                         className='input'   
                         type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={emailValue}
+                        onChange={(e) => setEmailValue(e.target.value)}
                     />
                     <br/>
                     <div className='label_name'>Password</div>
                     <input
                         className='input'
                         type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        value={passwordValue}
+                        onChange={(e) => setPasswordValue(e.target.value)}
                     />
                     <Button />
                     <div className='help'>
